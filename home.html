@@ -1,0 +1,1479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CarePoint Hospital | Quality Healthcare for Everyone</title>
+  <meta name="description" content="CarePoint Hospital provides compassionate healthcare, emergency care, specialist consultations and modern medical services.">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <style>
+    :root {
+      --primary: #087f8c;
+      --primary-dark: #05636d;
+      --light-bg: #f1fafa;
+      --dark-text: #183b45;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #4b626a;
+      line-height: 1.7;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    .text-primary-custom {
+      color: var(--primary);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+
+    .navbar {
+      background-color: #ffffff;
+    }
+
+    .navbar-brand {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+
+    .navbar-brand:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: var(--dark-text);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #effbfb, #ffffff);
+      padding: 90px 0;
+    }
+
+    .hero h1 {
+      color: var(--dark-text);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      color: var(--dark-text);
+      font-weight: 800;
+    }
+
+    .service-card {
+      border: 1px solid #e6eeee;
+      border-radius: 16px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 70, 80, 0.1);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background-color: #e5f7f7;
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+
+    .soft-bg {
+      background-color: var(--light-bg);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      background: rgba(10, 35, 42, 0.78);
+      border-radius: 12px;
+      padding: 18px;
+      left: 8%;
+      right: 8%;
+      bottom: 25px;
+    }
+
+    .doctor-img {
+      height: 260px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .nav-pills .nav-link {
+      color: var(--dark-text);
+      border-radius: 30px;
+      padding: 10px 22px;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: var(--primary-dark);
+      background-color: #eaf8f8;
+      box-shadow: none;
+    }
+
+    .accordion-button:focus {
+      box-shadow: 0 0 0 0.2rem rgba(8, 127, 140, 0.2);
+    }
+
+    .contact-card {
+      background-color: #ffffff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(0, 70, 80, 0.07);
+    }
+
+    footer {
+      background-color: #12343d;
+      color: #d9e9eb;
+    }
+
+    footer a {
+      color: #d9e9eb;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    .footer-heading {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    @media (max-width: 767.98px) {
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero h1 {
+        font-size: 2.35rem;
+      }
+
+      .hero-image {
+        height: 300px;
+      }
+
+      .section-padding {
+        padding: 55px 0;
+      }
+
+      .carousel-item img {
+        height: 300px;
+      }
+
+      .carousel-caption {
+        padding: 10px;
+        bottom: 12px;
+      }
+
+      .carousel-caption p {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center gap-2"
+         href="#home">
+        <i class="bi bi-heart-pulse-fill"></i>
+        CarePoint
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#doctors">Our Doctors</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQs</a>
+          </li>
+
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-primary rounded-pill px-4"
+               href="#contact">
+              Book an Appointment
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+          <span class="badge text-bg-info bg-opacity-10 text-primary-custom
+                       rounded-pill px-3 py-2 mb-3">
+            Your Health, Our Priority
+          </span>
+
+          <h1 class="display-4 mb-4">
+            Compassionate Care for a Healthier Tomorrow
+          </h1>
+
+          <p class="lead mb-4">
+            Welcome to CarePoint Hospital, where professional medical
+            care meets compassion. Our team is committed to supporting
+            you and your family through every stage of life.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-primary btn-lg px-4">
+              <i class="bi bi-calendar-check me-2"></i>
+              Book Appointment
+            </a>
+
+            <a href="#services"
+               class="btn btn-outline-secondary btn-lg px-4">
+              Explore Services
+            </a>
+          </div>
+
+          <div class="d-flex flex-wrap gap-4 mt-4">
+            <div>
+              <i class="bi bi-shield-check text-primary-custom me-1"></i>
+              Patient-focused care
+            </div>
+
+            <div>
+              <i class="bi bi-people text-primary-custom me-1"></i>
+              Family healthcare
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <img
+            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=85"
+            class="hero-image shadow"
+            alt="Healthcare professionals working together"
+          >
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= QUICK INFORMATION ================= -->
+  <section class="py-4 border-bottom">
+    <div class="container">
+      <div class="row g-4 text-center">
+
+        <div class="col-6 col-lg-3">
+          <div class="stat-number">
+            <i class="bi bi-heart-pulse"></i>
+          </div>
+          <h6 class="fw-bold mt-2">Patient Care</h6>
+          <p class="small mb-0">Care centered on you</p>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="stat-number">
+            <i class="bi bi-person-badge"></i>
+          </div>
+          <h6 class="fw-bold mt-2">Medical Team</h6>
+          <p class="small mb-0">Experienced professionals</p>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="stat-number">
+            <i class="bi bi-hospital"></i>
+          </div>
+          <h6 class="fw-bold mt-2">Modern Facilities</h6>
+          <p class="small mb-0">Patient-focused facilities</p>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="stat-number">
+            <i class="bi bi-calendar2-check"></i>
+          </div>
+          <h6 class="fw-bold mt-2">Appointments</h6>
+          <p class="small mb-0">Convenient scheduling</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SERVICES / CARDS ================= -->
+  <section class="section-padding" id="services">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="badge text-bg-info bg-opacity-10 text-primary-custom
+                     rounded-pill px-3 py-2 mb-3">
+          What We Do
+        </span>
+
+        <h2 class="section-title display-6">
+          Our Medical Services
+        </h2>
+
+        <p class="text-secondary mx-auto" style="max-width: 650px;">
+          Explore our healthcare services designed to support your
+          wellbeing and provide care for a range of medical needs.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card p-4">
+            <div class="service-icon mb-3">
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+
+            <h4 class="h5 fw-bold">General Consultation</h4>
+
+            <p>
+              Get medical assessments, advice and care for common
+              health concerns from qualified healthcare professionals.
+            </p>
+
+            <a href="#contact"
+               class="text-primary-custom fw-bold text-decoration-none mt-auto">
+              Request a consultation
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card p-4">
+            <div class="service-icon mb-3">
+              <i class="bi bi-activity"></i>
+            </div>
+
+            <h4 class="h5 fw-bold">Emergency Care</h4>
+
+            <p>
+              Emergency services for urgent medical situations,
+              with appropriate assessment and treatment.
+            </p>
+
+            <a href="#contact"
+               class="text-primary-custom fw-bold text-decoration-none mt-auto">
+              Emergency information
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card p-4">
+            <div class="service-icon mb-3">
+              <i class="bi bi-person-heart"></i>
+            </div>
+
+            <h4 class="h5 fw-bold">Maternity Care</h4>
+
+            <p>
+              Support for expectant mothers through antenatal visits,
+              pregnancy monitoring and postnatal care.
+            </p>
+
+            <a href="#contact"
+               class="text-primary-custom fw-bold text-decoration-none mt-auto">
+              Explore maternity care
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card p-4">
+            <div class="service-icon mb-3">
+              <i class="bi bi-capsule"></i>
+            </div>
+
+            <h4 class="h5 fw-bold">Pharmacy</h4>
+
+            <p>
+              Access prescribed medications and guidance from
+              qualified pharmacy professionals.
+            </p>
+
+            <a href="#contact"
+               class="text-primary-custom fw-bold text-decoration-none mt-auto">
+              Pharmacy information
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card p-4">
+            <div class="service-icon mb-3">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+
+            <h4 class="h5 fw-bold">Laboratory Services</h4>
+
+            <p>
+              Laboratory testing to support medical assessments
+              and help healthcare professionals make informed decisions.
+            </p>
+
+            <a href="#contact"
+               class="text-primary-custom fw-bold text-decoration-none mt-auto">
+              Laboratory information
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card p-4">
+            <div class="service-icon mb-3">
+              <i class="bi bi-heart"></i>
+            </div>
+
+            <h4 class="h5 fw-bold">Preventive Healthcare</h4>
+
+            <p>
+              Health screenings, routine checkups and guidance
+              to help you make informed health decisions.
+            </p>
+
+            <a href="#contact"
+               class="text-primary-custom fw-bold text-decoration-none mt-auto">
+              Schedule a checkup
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= ABOUT US ================= -->
+  <section class="section-padding soft-bg" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+          <img
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
+            class="img-fluid rounded-4 shadow"
+            alt="Healthcare professional providing patient care"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="col-lg-6">
+          <span class="badge text-bg-info bg-opacity-10 text-primary-custom
+                       rounded-pill px-3 py-2 mb-3">
+            About CarePoint
+          </span>
+
+          <h2 class="section-title display-6 mb-4">
+            Putting Patients at the Heart of Everything
+          </h2>
+
+          <p>
+            At CarePoint Hospital, we believe good healthcare starts
+            with listening, understanding and treating every patient
+            with dignity.
+          </p>
+
+          <p>
+            Our goal is to make healthcare information accessible
+            and help patients connect with the appropriate services
+            for their needs.
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+              Patient-centered service
+            </li>
+
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+              Respectful communication
+            </li>
+
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+              Commitment to quality and safety
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary mt-3 px-4">
+            Contact Our Team
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FACILITIES CAROUSEL ================= -->
+  <section class="section-padding" id="facilities">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="badge text-bg-info bg-opacity-10 text-primary-custom
+                     rounded-pill px-3 py-2 mb-3">
+          Explore CarePoint
+        </span>
+
+        <h2 class="section-title display-6">
+          Our Hospital Facilities
+        </h2>
+
+        <p class="text-secondary">
+          Take a look at healthcare environments and facilities.
+        </p>
+      </div>
+
+      <div
+        id="hospitalCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="4500"
+      >
+
+        <!-- Carousel indicators -->
+        <div class="carousel-indicators">
+          <button type="button"
+                  data-bs-target="#hospitalCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"></button>
+
+          <button type="button"
+                  data-bs-target="#hospitalCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+
+          <button type="button"
+                  data-bs-target="#hospitalCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel slides -->
+        <div class="carousel-inner rounded-4 overflow-hidden shadow">
+
+          <div class="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1400&q=85"
+              class="d-block"
+              alt="Hospital healthcare environment"
+            >
+
+            <div class="carousel-caption">
+              <h3 class="h5 fw-bold">Modern Healthcare Facilities</h3>
+              <p class="mb-0">Designed to support patient care and comfort.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1400&q=85"
+              class="d-block"
+              alt="Medical professional working in a healthcare facility"
+              loading="lazy"
+            >
+
+            <div class="carousel-caption">
+              <h3 class="h5 fw-bold">Professional Medical Care</h3>
+              <p class="mb-0">Supporting patients through every step of care.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1400&q=85"
+              class="d-block"
+              alt="Medical team in a clinical environment"
+              loading="lazy"
+            >
+
+            <div class="carousel-caption">
+              <h3 class="h5 fw-bold">Care You Can Count On</h3>
+              <p class="mb-0">Working together to support healthier communities.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Previous button -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#hospitalCarousel"
+          data-bs-slide="prev"
+          aria-label="Previous slide"
+        >
+          <span class="carousel-control-prev-icon"
+                aria-hidden="true"></span>
+        </button>
+
+        <!-- Next button -->
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#hospitalCarousel"
+          data-bs-slide="next"
+          aria-label="Next slide"
+        >
+          <span class="carousel-control-next-icon"
+                aria-hidden="true"></span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= DOCTORS ================= -->
+  <section class="section-padding soft-bg" id="doctors">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="badge text-bg-info bg-opacity-10 text-primary-custom
+                     rounded-pill px-3 py-2 mb-3">
+          Our Team
+        </span>
+
+        <h2 class="section-title display-6">
+          Meet Our Healthcare Professionals
+        </h2>
+
+        <p class="text-secondary">
+          Our sample team section shows how medical staff profiles
+          can be presented on a hospital website.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85"
+              class="doctor-img"
+              alt="Doctor portrait"
+              loading="lazy"
+            >
+
+            <div class="card-body p-4">
+              <span class="badge text-bg-success mb-2">Sample Profile</span>
+              <h3 class="h5 fw-bold">Dr. James Mwangi</h3>
+              <p class="text-primary-custom mb-2">General Medicine</p>
+              <p class="mb-0">
+                Supporting patients with general medical assessments
+                and ongoing healthcare needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85"
+              class="doctor-img"
+              alt="Doctor portrait"
+              loading="lazy"
+            >
+
+            <div class="card-body p-4">
+              <span class="badge text-bg-success mb-2">Sample Profile</span>
+              <h3 class="h5 fw-bold">Dr. Sarah Wanjiku</h3>
+              <p class="text-primary-custom mb-2">Family Healthcare</p>
+              <p class="mb-0">
+                Providing healthcare guidance for individuals
+                and families at different stages of life.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=800&q=85"
+              class="doctor-img"
+              alt="Healthcare professional portrait"
+              loading="lazy"
+            >
+
+            <div class="card-body p-4">
+              <span class="badge text-bg-success mb-2">Sample Profile</span>
+              <h3 class="h5 fw-bold">Dr. David Otieno</h3>
+              <p class="text-primary-custom mb-2">Patient Care</p>
+              <p class="mb-0">
+                Helping patients understand their care plans
+                and available healthcare services.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= TABS ================= -->
+  <section class="section-padding" id="health-information">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="section-title display-6">
+          Healthcare Information
+        </h2>
+
+        <p class="text-secondary">
+          Select a tab to explore the information you need.
+        </p>
+      </div>
+
+      <!-- Tab navigation -->
+      <ul class="nav nav-pills justify-content-center gap-2 mb-4"
+          id="healthTabs"
+          role="tablist">
+
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="visiting-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#visiting"
+            type="button"
+            role="tab"
+            aria-controls="visiting"
+            aria-selected="true">
+            Visiting Hours
+          </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="appointments-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#appointments"
+            type="button"
+            role="tab"
+            aria-controls="appointments"
+            aria-selected="false">
+            Appointments
+          </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="insurance-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#insurance"
+            type="button"
+            role="tab"
+            aria-controls="insurance"
+            aria-selected="false">
+            Billing
+          </button>
+        </li>
+
+      </ul>
+
+      <!-- Tab content -->
+      <div class="tab-content border rounded-4 p-4 p-md-5"
+           id="healthTabsContent">
+
+        <div
+          class="tab-pane fade show active"
+          id="visiting"
+          role="tabpanel"
+          aria-labelledby="visiting-tab"
+          tabindex="0">
+
+          <h3 class="h5 fw-bold">Hospital Visiting Hours</h3>
+
+          <p>
+            Visiting arrangements depend on the ward, the patient's
+            condition and current hospital policies.
+          </p>
+
+          <ul>
+            <li>Check with reception before visiting a patient.</li>
+            <li>Follow ward-specific visitor guidelines.</li>
+            <li>Respect patient privacy and rest periods.</li>
+          </ul>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="appointments"
+          role="tabpanel"
+          aria-labelledby="appointments-tab"
+          tabindex="0">
+
+          <h3 class="h5 fw-bold">Booking an Appointment</h3>
+
+          <p>
+            Use the contact form below to send an appointment request.
+            The hospital team should confirm the appointment and time.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">
+            Request an Appointment
+          </a>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="insurance"
+          role="tabpanel"
+          aria-labelledby="insurance-tab"
+          tabindex="0">
+
+          <h3 class="h5 fw-bold">Billing and Insurance</h3>
+
+          <p>
+            Contact the billing department to confirm accepted insurance
+            providers, current payment options and service charges.
+          </p>
+
+          <a href="#contact" class="btn btn-outline-primary">
+            Ask About Billing
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FAQ ACCORDION ================= -->
+  <section class="section-padding soft-bg" id="faq">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="badge text-bg-info bg-opacity-10 text-primary-custom
+                     rounded-pill px-3 py-2 mb-3">
+          Need Help?
+        </span>
+
+        <h2 class="section-title display-6">
+          Frequently Asked Questions
+        </h2>
+
+        <p class="text-secondary">
+          Find answers to common questions about hospital services.
+        </p>
+      </div>
+
+      <div class="accordion mx-auto" id="faqAccordion"
+           style="max-width: 850px;">
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqOne"
+              aria-expanded="true"
+              aria-controls="faqOne">
+              How do I request an appointment?
+            </button>
+          </h3>
+
+          <div
+            id="faqOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion">
+
+            <div class="accordion-body">
+              Complete the appointment request form on this page
+              or contact the hospital directly. Wait for confirmation
+              before assuming your appointment has been booked.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqTwo"
+              aria-expanded="false"
+              aria-controls="faqTwo">
+              What should I bring to my appointment?
+            </button>
+          </h3>
+
+          <div
+            id="faqTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+
+            <div class="accordion-body">
+              Bring relevant identification, appointment details,
+              current medication information and any previous medical
+              records or referral documents you have been asked to provide.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqThree"
+              aria-expanded="false"
+              aria-controls="faqThree">
+              Can I request information about medical services?
+            </button>
+          </h3>
+
+          <div
+            id="faqThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+
+            <div class="accordion-body">
+              Yes. Contact the hospital team for information about
+              available services, appointment availability, charges
+              and any preparation required for your visit.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqFour"
+              aria-expanded="false"
+              aria-controls="faqFour">
+              What should I do in a medical emergency?
+            </button>
+          </h3>
+
+          <div
+            id="faqFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+
+            <div class="accordion-body">
+              Do not wait for a website response or appointment
+              confirmation. Contact local emergency services or go
+              to an appropriate emergency facility immediately.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= CONTACT / APPOINTMENT FORM ================= -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+
+      <div class="row g-5">
+
+        <div class="col-lg-5">
+          <span class="badge text-bg-info bg-opacity-10 text-primary-custom
+                       rounded-pill px-3 py-2 mb-3">
+            Get in Touch
+          </span>
+
+          <h2 class="section-title display-6 mb-4">
+            Request an Appointment
+          </h2>
+
+          <p>
+            Send an appointment request or ask our team about
+            the healthcare services available.
+          </p>
+
+          <div class="d-flex gap-3 mt-4">
+            <div class="service-icon flex-shrink-0">
+              <i class="bi bi-telephone"></i>
+            </div>
+
+            <div>
+              <h3 class="h6 fw-bold">Phone</h3>
+              <p class="mb-0">Add your official hospital phone number</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mt-4">
+            <div class="service-icon flex-shrink-0">
+              <i class="bi bi-envelope"></i>
+            </div>
+
+            <div>
+              <h3 class="h6 fw-bold">Email</h3>
+              <p class="mb-0">Add your official hospital email</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mt-4">
+            <div class="service-icon flex-shrink-0">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+
+            <div>
+              <h3 class="h6 fw-bold">Location</h3>
+              <p class="mb-0">Add your hospital's actual location</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="contact-card">
+
+            <h3 class="h4 fw-bold mb-4">Appointment Request Form</h3>
+
+            <form id="appointmentForm">
+
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    name="fullName"
+                    autocomplete="name"
+                    required
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    autocomplete="tel"
+                    required
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label for="department" class="form-label">
+                    Department
+                  </label>
+
+                  <select
+                    class="form-select"
+                    id="department"
+                    name="department"
+                    required
+                  >
+                    <option value="" selected disabled>
+                      Choose a department
+                    </option>
+
+                    <option value="general">General Consultation</option>
+                    <option value="maternity">Maternity Care</option>
+                    <option value="laboratory">Laboratory</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="other">Other Enquiry</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="appointmentDate" class="form-label">
+                    Preferred Date
+                  </label>
+
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="appointmentDate"
+                    name="appointmentDate"
+                    required
+                  >
+                </div>
+
+                <div class="col-12">
+                  <label for="message" class="form-label">
+                    Message <span class="text-secondary">(Optional)</span>
+                  </label>
+
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Enter a general appointment enquiry. Please do not include sensitive medical details."
+                  ></textarea>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="privacyConsent"
+                      required
+                    >
+
+                    <label class="form-check-label" for="privacyConsent">
+                      I agree to be contacted about this request.
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg w-100"
+                  >
+                    <i class="bi bi-send me-2"></i>
+                    Submit Request
+                  </button>
+                </div>
+
+                <div class="col-12">
+                  <p class="small text-secondary mb-0">
+                    Demo only: this form does not send or store
+                    appointment information.
+                  </p>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= TOAST NOTIFICATION ================= -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+    <div
+      id="appointmentToast"
+      class="toast align-items-center border-0"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+
+      <div class="d-flex text-bg-success rounded">
+        <div class="toast-body">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          Demo submitted! No appointment has been booked.
+        </div>
+
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="pt-5 pb-3">
+    <div class="container">
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <a href="#home"
+             class="navbar-brand text-white text-decoration-none">
+            <i class="bi bi-heart-pulse-fill me-2"></i>
+            CarePoint
+          </a>
+
+          <p class="mt-3">
+            Caring for our community through compassionate,
+            accessible and patient-focused healthcare.
+          </p>
+
+          <div class="d-flex gap-3 fs-5">
+            <a href="#contact" aria-label="Contact us">
+              <i class="bi bi-envelope"></i>
+            </a>
+
+            <a href="#contact" aria-label="Our location">
+              <i class="bi bi-geo-alt"></i>
+            </a>
+
+            <a href="#contact" aria-label="Telephone">
+              <i class="bi bi-telephone"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading h6">Quick Links</h3>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home">Home</a></li>
+            <li class="mb-2"><a href="#about">About Us</a></li>
+            <li class="mb-2"><a href="#services">Services</a></li>
+            <li class="mb-2"><a href="#doctors">Our Doctors</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading h6">Information</h3>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#facilities">Facilities</a></li>
+            <li class="mb-2"><a href="#faq">FAQs</a></li>
+            <li class="mb-2"><a href="#contact">Appointments</a></li>
+            <li class="mb-2"><a href="#health-information">Billing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h3 class="footer-heading h6">Important Notice</h3>
+
+          <p class="small">
+            This is a sample hospital website for learning purposes.
+            Hospital details, staff profiles, services and contact
+            information must be verified before publication.
+          </p>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary mt-4">
+
+      <div class="d-flex flex-column flex-md-row
+                  justify-content-between gap-2 small">
+        <p class="mb-0">
+          &copy; <span id="currentYear"></span> CarePoint Hospital.
+          All rights reserved.
+        </p>
+
+        <a href="#home">Back to top &uarr;</a>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JavaScript bundle: required for interactive components -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Automatically update the copyright year.
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // Demo appointment form: validate and display a toast.
+    // No data is sent to a server.
+    const appointmentForm = document.getElementById("appointmentForm");
+    const appointmentToast = document.getElementById("appointmentToast");
+    const appointmentDate = document.getElementById("appointmentDate");
+
+    // Prevent selecting a past date.
+    const today = new Date();
+    const localToday = new Date(
+      today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split("T")[0];
+
+    appointmentDate.min = localToday;
+
+    appointmentForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!appointmentForm.reportValidity()) {
+        return;
+      }
+
+      const selectedDate = appointmentDate.value;
+
+      if (selectedDate < localToday) {
+        appointmentDate.setCustomValidity(
+          "Please choose today or a future date."
+        );
+        appointmentDate.reportValidity();
+        appointmentDate.setCustomValidity("");
+        return;
+      }
+
+      const toast = bootstrap.Toast.getOrCreateInstance(
+        appointmentToast,
+        { delay: 5000 }
+      );
+
+      toast.show();
+      appointmentForm.reset();
+    });
+  </script>
+
+</body>
+</html>
